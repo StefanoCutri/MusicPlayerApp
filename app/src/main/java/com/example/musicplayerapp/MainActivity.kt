@@ -58,11 +58,7 @@ class MainActivity : AppCompatActivity() {
                     seekBar.max = finalTime.toInt()
                     oneTimeOnly = 1
                 }
-
-                remainingTime.text = startTime.toString()
                 seekBar.progress = startTime.toInt()
-                handler.postDelayed({ updateSongTime }, 1000)
-
             }
 
             songTitle.text = resources.getResourceEntryName(R.raw.falling)
@@ -76,7 +72,6 @@ class MainActivity : AppCompatActivity() {
                         .show()
                 }
             }
-
             backBtn.setOnClickListener {
                 var temp = startTime.toInt()
 
